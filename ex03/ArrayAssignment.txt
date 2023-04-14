@@ -1,0 +1,1 @@
+At `b = a;`, the reference to the array that a has was passed. So variable b refers to a's arary.
