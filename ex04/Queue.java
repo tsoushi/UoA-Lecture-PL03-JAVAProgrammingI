@@ -1,48 +1,43 @@
-public class Queue<T> {
-    private QueueNode<T> nil;
+public class Queue {
+    private SimpleNode nil;
+    private int size = 0;
 
     Queue() {
         init();
     }
 
     void init() {
-        nil = new QueueNode<T>();
+        nil = new SimpleNode();
         nil.setNext(nil);
         nil.setPrev(nil);
     }
 
-    QueueNode<T> listSearch(T key) {
-        for (QueueNode<T> p = nil.getNext(); p != nil; p = p.getNext()) {
-            if (p.getKey() == key) return p;
-        }
-
-        return nil;
-    }
- 
-    void printList() {
-        for (QueueNode<T> p = nil.getNext(); p != nil; p = p.getNext()) {
-            if (p != nil.getNext()) System.out.print(" ");
-            System.out.print(p.getKey());
-        }
-        System.out.println();
-    }
-
-    void delete(T key) {
-        QueueNode<T> node = listSearch(key);
-
+    int dequeue() {
+        SimpleNode node = nil.getPrev();
         if (node != nil) {
             node.getPrev().setNext(node.getNext());
             node.getNext().setPrev(node.getPrev());
             node.setPrev(null);
             node.setNext(null);
+
+            size--;
+            return node.getKey();
         }
+
+        return -1;
     }
 
-    void insert(T key) {
-        QueueNode<T> node = new QueueNode<T>(key);
+    void enqueue(int key) {
+        SimpleNode node = new SimpleNode(key);
         nil.getNext().setPrev(node);
         node.setNext(nil.getNext());
         node.setPrev(nil);
         nil.setNext(node);
+
+        size++;
+    }
+
+    int getSize() {
+        return size;
     }
 }
