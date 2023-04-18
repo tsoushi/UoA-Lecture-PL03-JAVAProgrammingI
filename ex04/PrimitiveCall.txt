@@ -1,0 +1,6 @@
+# Values of x and y
+(x, y) = (8, 5)
+
+
+# why their values have not changed
+When `movePoint` method was called, the values of variables `x` and `y` in `test` method were copied to the variable `x` and `y` in scope of the `movePoint` method. So the variables in `test` method were not changed even if you rewrite the variables in movePoint method.

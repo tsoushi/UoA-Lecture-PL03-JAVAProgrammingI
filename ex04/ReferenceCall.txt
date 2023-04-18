@@ -1,0 +1,9 @@
+# output
+- Before the statement is added.
+(x, y) = (100, 120)
+
+- After the statement is added.
+(x, y) = (100, 120)
+
+# why
+The argument `point` of the `movePoint` method is passed by reference. So you could change the fields of the point object through the set method. However strictly speaking, it can be said that the pointer of the argument `point` is passed by value. So even if you rewrite variable `p` in `movePoint` method, the variable `point` in test method will not be changed.
