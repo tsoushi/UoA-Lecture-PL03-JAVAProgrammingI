@@ -1,0 +1,17 @@
+# How many fields does the Point have?
+two fields
+
+# How many fields does the MovingPoint have?
+four fields
+
+# how many methods does the Point have?
+two methods
+
+# how many methods does the Point have?
+four methods
+
+# Are there any fields with the same meaning in the Point and MovingPoint classes?
+Field x and b are same meaning.
+
+# Are there any methods int the Point and MovingPoint classes expressing similar behavior?
+`print` and `getDistance` methods expressing similar behavior.

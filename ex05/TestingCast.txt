@@ -1,0 +1,9 @@
+# Which of the above 1. - 6. operations are implicit casts?
+2, 5, 6
+
+# Which of the operations in 1. - 6. above are explicit casts?
+3
+
+# Why can an object reference of type Point refer to an object of type MovingPoint?
+It is because MovingPoint class inherits Point class. In other words, because Point class is a super class of MovingPoint class.
+

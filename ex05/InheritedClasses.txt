@@ -1,0 +1,17 @@
+# How many fields does the Point have?
+two fields
+
+# How many fields does the MovingPoint have?
+four fields
+
+# how many methods does the Point have?
+two methods
+
+# how many methods does the Point have?
+four methods
+
+# What are the advantages that the solution to Problem C has over the solution to Problem B?
+Programmers don't have to write common fields and methods in MovingPoint class. And we can use MovingPoint object as Point object, so we can calculate the distance between MovingPoint object and Point object.
+
+# Can you execute the following operation at the end of TestObjectApplication? And why?
+I can execute the following operation because I can use MovingPoint object as Point object because MovingPoint inherits Point, so we can calculate the distance between MovingPoint object and Point object.

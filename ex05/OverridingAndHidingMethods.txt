@@ -1,0 +1,8 @@
+# Which method overrides a method in the superclass?
+methodTwo
+
+# Which method hides a method in the superclass?
+methodFour
+
+# What do the other methods do?
+`methodOne` and `methodThree` generate a compile-time error
