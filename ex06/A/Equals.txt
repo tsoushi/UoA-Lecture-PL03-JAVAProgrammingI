@@ -1,0 +1,1 @@
+This is because `==` and `equals` are comparing the pointers of the objects.
