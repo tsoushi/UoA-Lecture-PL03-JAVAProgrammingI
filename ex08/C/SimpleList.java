@@ -1,4 +1,4 @@
-class SimpleList {
+class SimpleList implements Aggregate {
     private SimpleNode nil;
 
     SimpleList() {
