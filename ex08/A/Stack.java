@@ -1,15 +1,20 @@
-public class Stack extends OpenList {
-    private int top = 0;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Stack implements OpenList {
+    List<Integer> data = new ArrayList<Integer>();
     
     public boolean isEmpty() {
-        return top == 0;
+        return data.isEmpty();
     }
     
     public int pop() {
-        return data[--top];
+        int value = data.get(0);
+        data.remove(0);
+        return value;
     }
 
     public void push(int value) {
-        data[top++] = value;
+        data.add(0, value);
     }
 }

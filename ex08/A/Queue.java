@@ -1,19 +1,20 @@
-public class Queue extends OpenList {
-    int head = 0;
-    int tail = 0;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Queue implements OpenList {
+    List<Integer> data = new ArrayList<Integer>();
 
     public boolean isEmpty() {
-        return head == tail;
+        return data.isEmpty();
     }
 
     public int pop() {
-        int value = data[head];
-        head = ++head % MAX_SIZE;
+        int value = data.get(0);
+        data.remove(0);
         return value;
     }
 
     public void push(int value) {
-        data[tail] = value;
-        tail = ++tail % MAX_SIZE;
+        data.add(value);
     }
 }
