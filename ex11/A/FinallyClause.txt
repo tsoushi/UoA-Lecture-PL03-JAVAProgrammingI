@@ -1,0 +1,9 @@
+1. Why does the program print the two lines below?
+It is because throwed exception was caught by `catch (Exception e)`, and then, finally block was executed.
+
+2. Why does the program print the line below (It looks like the program does not print the line because
+of the break statement)?
+It is because finally block is executed always.
+
+3. Why does the program print the line below?
+When the `break` was called, finally block was executed, and then `System.out.println("Main program ends")` was executed.
